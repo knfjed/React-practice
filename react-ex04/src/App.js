@@ -2,25 +2,22 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  var [count, setCount] = React.useState(0);
+  const [countUp, setCountUp] = React.useState(0);
+  const [countDouble, setCountUp_5] = React.useState(0);
 
   return (
     <div>
-      <p>count: {count}</p>
-      <p>count: {count * 2}</p>
-      <button type="submit" onClick={() => setCount(count + 1)}>
+      <p>count: {countUp}</p>
+      <p>count: {countDouble}</p>
+
+      <button type="submit" onClick={() => setCountUp(countUp + 1)}>
         count up
       </button>
-
       <button
         type="submit"
-        onClick={() => setCount((prevCount) => prevCount + 5)}
+        onClick={() => setCountUp_5((prevCount) => prevCount + 5)}
       >
         5 count up
-      </button>
-
-      <button type="reset" onClick={() => setCount((count = 0))}>
-        reset
       </button>
     </div>
   );
